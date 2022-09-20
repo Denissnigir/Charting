@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        xmlns:ct="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ct:Chart x:Name="MainChart" Foreground="#00bcd4"
+                      FontWeight="Bold">
+            <ct:Chart.Series>
+                <ct:PieSeries Title="Потрачено"
+                                  IndependentValueBinding="{Binding Path=Namee}" 
+                                  DependentValueBinding="{Binding Path=Sum}"
+                                  BorderBrush="#00bcd4"/>
+
+            </ct:Chart.Series>
+        </ct:Chart>
+    </Grid>
+</Window>
